@@ -5,7 +5,7 @@ package com.crowd;
  */
 public class TestConfig {
 
-    public static final String baseUrl = "https://api.grade5.lk";
+    public static final String baseUrl = "https://dev.api.grade5.lk";
 
     //Endpoints
     public static final String ENDPOINT_LOGIN = TestConfig.baseUrl + "/v1/auth/login";
@@ -22,6 +22,7 @@ public class TestConfig {
     public static String loginValueLastName = "Admin";
     public static String loginKeyRole = "user.role";
     public static String loginValueRole = "SYSTEM_ADMIN";
+    public static String ACCESS_TOKEN;
 
     //Create paper set keys and values
     public static String createPsKeyTitle = "title";
