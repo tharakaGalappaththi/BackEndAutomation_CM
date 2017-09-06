@@ -6,6 +6,7 @@ package com.crowd;
 public class TestConfig {
 
     public static final String baseUrl = "https://dev.api.grade5.lk";
+    public  static  final long expectedResponseTime = 4000L;
 
     //Endpoints
     public static final String ENDPOINT_LOGIN = TestConfig.baseUrl + "/v1/auth/login";

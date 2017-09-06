@@ -9,6 +9,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.expect;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 /**
  * Created by QA on 8/31/2017.
@@ -24,6 +25,10 @@ public class CreatePaperEP {
                 .statusCode(200)
                 //.log().all()
                 .body(TestConfig.createPsKeyMessage, equalTo(TestConfig.createPsValueMessage))
+                .and()
+                .time(lessThanOrEqualTo(TestConfig.expectedResponseTime)) //Verify response time is less than or equal to 4s
+                .and()
+                .contentType(ContentType.JSON)
                 .given()
                 .contentType(ContentType.JSON)
                 .header(TestConfig.createPsKeyAccessToken, TestConfig.ACCESS_TOKEN)

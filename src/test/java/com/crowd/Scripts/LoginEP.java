@@ -10,7 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.expect;
+import static org.hamcrest.Matchers.comparesEqualTo;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 /**
  * Created by QA on 8/31/2017.
@@ -32,6 +34,10 @@ public class LoginEP {
                 .body(TestConfig.loginKeyFirstname, equalTo(TestConfig.loginValueFirstname))
                 .body(TestConfig.loginKeyLastname, equalTo(TestConfig.loginValueLastName))
                 .body(TestConfig.loginKeyRole, equalTo(TestConfig.loginValueRole))
+                .and()
+                .time(lessThanOrEqualTo(TestConfig.expectedResponseTime)) //Verify response time is less than or equal to 4s
+                .and()
+                .contentType(ContentType.JSON)
                 .given()
                 .contentType(ContentType.JSON)
                 .body(jsonAsMapLogin)
