@@ -24,7 +24,7 @@ public class LoginEP {
     Reporter loginRP = new Reporter();
     @Test
     public void login() {
-        loginRP.log("This test case verifies the functionality of Login API ");
+        loginRP.log("This test case verifies the functionality of the Login API ");
 
         Map<String, Object> jsonAsMapLogin = new HashMap<>();
         jsonAsMapLogin.put(TestConfig.loginKeyEmail, TestConfig.loginValueEmail);
