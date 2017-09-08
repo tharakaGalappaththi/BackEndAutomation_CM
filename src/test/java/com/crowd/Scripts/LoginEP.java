@@ -4,6 +4,7 @@ import com.crowd.TestConfig;
 import com.crowd.TestUtils;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -20,9 +21,11 @@ import static org.hamcrest.Matchers.lessThanOrEqualTo;
 public class LoginEP {
 
     public static String accessToken;
-
+    Reporter loginRP = new Reporter();
     @Test
     public void login() {
+        loginRP.log("This test case verifies the functionality of Login API ");
+
         Map<String, Object> jsonAsMapLogin = new HashMap<>();
         jsonAsMapLogin.put(TestConfig.loginKeyEmail, TestConfig.loginValueEmail);
         jsonAsMapLogin.put(TestConfig.loginKeyPassword, TestConfig.loginValuePassword);

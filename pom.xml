@@ -85,6 +85,27 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.uncommons/reportng: FOR REPORTING-->
+        <dependency>
+            <groupId>org.uncommons</groupId>
+            <artifactId>reportng</artifactId>
+            <version>1.1.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/velocity/velocity-dep : FOR REPORTING-->
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity-dep</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.inject/guice  : FOR REPORTING -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>4.0-beta</version>
+        </dependency>
     </dependencies>
 
 

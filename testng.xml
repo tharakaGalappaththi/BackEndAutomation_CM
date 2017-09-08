@@ -2,9 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Test Suit 01">
+
     <listeners>
-        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
+
     <test name="CM_API_Test">
         <classes>
             <class name="com.crowd.Scripts.LoginEP"/>
